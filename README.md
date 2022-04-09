@@ -102,6 +102,7 @@ private static string ConcatenateWordsMutable(string[] words)
 Immutable Type
 Definition:
 
+![Mutable_2a](https://user-images.githubusercontent.com/13406481/162573629-3a36ae69-f455-4cbd-aff9-fa169cf70a9c.png)
 
 
 
