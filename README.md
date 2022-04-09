@@ -42,7 +42,16 @@ Under Debug > Windows > Memory, select Memory 1, Memory 2, Memory 3, or Memory 4
 More info [here](https://docs.microsoft.com/en-us/visualstudio/debugger/memory-windows?view=vs-2022)
 
 
+Iteration 1:
+The memory window shows the memory allocation for the variables used at that time of running code.
+Let's put our variable ```resultImmutable``` in the address box in top left corner and it will show the memory allocation at that moment for that variable.
+On the right side there is also rappresentation of the hexadecimal code and then going further on the right side there is the value that corresponds to ```abbey,``` as expected.
 
+![Immutable_2a](https://user-images.githubusercontent.com/13406481/162569090-94b00d3f-642f-4cfb-8a60-dafc9849ef76.png)
+
+
+Iteration 2:
+thee fowwoling screenshot shows the memory allocation in the next iteration.
 
 
 
