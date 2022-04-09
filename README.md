@@ -1,12 +1,13 @@
-# MutableVsImmutable
+# Mutable Vs Immutable
 
 
 Mutable VS Immutable
 
-Mutable and immutable is not only a concept regarding an unchangable value (like constant or readonly) but it is intended also in terms of memory allocation (change/not change).
-The following examples with documented screenshots will try to explain the concept for mutable and immutable types.
+Mutable and immutable are not only concepts regarding an unchangable value (like constant or readonly) but it is intended also in terms of memory allocation.
+The following examples with documented screenshots will try to explain the concept that is behind.
 
-Let's take a simple example of string concatenation starting from a list of words and let's try to understand what it means to create an algorithm with mutable or immutable types.
+A simple code example will help to understand practically when these mutable or immutable types can be used.
+As a simple example let's consider a string concatenation algorithm starting from a list of words and let's try to understand what it means to create an algorithm with mutable or immutable types.
 
 
 
