@@ -47,11 +47,19 @@ The memory window shows the memory allocation for the variables used at that tim
 Let's put our variable ```resultImmutable``` in the address box in top left corner and it will show the memory allocation at that moment for that variable.
 On the right side there is also rappresentation of the hexadecimal code and then going further on the right side there is the value that corresponds to ```abbey,``` as expected.
 
+On the first iteration we will have this situation: 
+Iteration 1: value ```"abbey,"```, memory address: ```0x0000019780019788```
+
 ![Immutable_2a](https://user-images.githubusercontent.com/13406481/162569090-94b00d3f-642f-4cfb-8a60-dafc9849ef76.png)
 
 
 Iteration 2:
-thee fowwoling screenshot shows the memory allocation in the next iteration.
+the follwing screenshot shows the memory allocation in the next iteration.
+![Immutable_2b](https://user-images.githubusercontent.com/13406481/162569383-788e9ee7-b870-4b58-8045-e98adb6cbd07.png)
+
+On the second iteration we will have this situation: 
+Iteration 2: value ```"abbey, absent,"``` memory address: ```0x00000197800197B0```
+
 
 
 
@@ -102,11 +110,11 @@ As we can see on each iteration the memory allocation instantiated at the beginn
 
 
 
-									|		Mutable    	   	|		Immutable    	|
-				| Value				|	Address Memory 	   	|   Address Memory		|
-Iteration 1 	| abbey				|	0x0000019780203C18 	|	0x0000019780019788	|
-Iteration 2 	| abbey, absent		| 	0x0000019780203C18 	|	0x00000197800197B0	|
-Iteration 510   | abbey, absent, ...|   0x0000019780203C18	|	0x0000019780201DB0	|
+		|		Mutable    	   	|		Immutable    	|
+		| Value					|	Address Memory 	   	|   Address Memory		|
+Iteration 1 	| abbey					|	0x0000019780203C18 	|	0x0000019780019788	|
+Iteration 2 	| abbey, absent				| 	0x0000019780203C18 	|	0x00000197800197B0	|
+Iteration 510   | abbey, absent, ...			|   0x0000019780203C18		|	0x0000019780201DB0	|
 
 
 
