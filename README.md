@@ -61,9 +61,10 @@ On the second iteration we will have this situation:
 Iteration 2: value ```"abbey, absent,"``` memory address: ```0x00000197800197B0```
 
 
+Iteration 510:
+![Immutable_2c](https://user-images.githubusercontent.com/13406481/162572385-ccfc7e5c-02c1-405d-912b-f1a8efb33d3c.png)
 
-
-
+Iteration 510: value ```"abbey, absent, absolute, ..."``` memory address: ```0x0000019780201DB0```
 
 
 
