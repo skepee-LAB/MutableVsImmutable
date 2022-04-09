@@ -52,16 +52,18 @@ Iteration 1: value ```"abbey,"```, memory address: ```0x0000019780019788```
 
 ![Immutable_2a](https://user-images.githubusercontent.com/13406481/162569090-94b00d3f-642f-4cfb-8a60-dafc9849ef76.png)
 
-
+---
 Iteration 2:
 the follwing screenshot shows the memory allocation in the next iteration.
+
 ![Immutable_2b](https://user-images.githubusercontent.com/13406481/162569383-788e9ee7-b870-4b58-8045-e98adb6cbd07.png)
 
 On the second iteration we will have this situation: 
 Iteration 2: value ```"abbey, absent,"``` memory address: ```0x00000197800197B0```
 
-
+---
 Iteration 510:
+
 ![Immutable_2c](https://user-images.githubusercontent.com/13406481/162572385-ccfc7e5c-02c1-405d-912b-f1a8efb33d3c.png)
 
 Iteration 510: value ```"abbey, absent, absolute, ..."``` memory address: ```0x0000019780201DB0```
