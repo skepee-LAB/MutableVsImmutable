@@ -48,7 +48,8 @@ Let's put our variable ```resultImmutable``` in the address box in top left corn
 On the right side there is also rappresentation of the hexadecimal code and then going further on the right side there is the value that corresponds to ```abbey,``` as expected.
 
 On the first iteration we will have this situation: 
-Iteration 1: value ```"abbey,"```, memory address: ```0x0000019780019788```
+Iteration 1: 
+value ```"abbey,"```, memory address: ```0x0000019780019788```
 
 ![Immutable_2a](https://user-images.githubusercontent.com/13406481/162569090-94b00d3f-642f-4cfb-8a60-dafc9849ef76.png)
 
@@ -67,6 +68,10 @@ Iteration 510:
 ![Immutable_2c](https://user-images.githubusercontent.com/13406481/162572385-ccfc7e5c-02c1-405d-912b-f1a8efb33d3c.png)
 
 Iteration 510: value ```"abbey, absent, absolute, ..."``` memory address: ```0x0000019780201DB0```
+
+
+## Recap after all iterations:
+As we can see at each iteration  ```resultImmutable``` value changes and a new allocation for the string will be created.
 
 
 
@@ -91,23 +96,23 @@ private static string ConcatenateWordsMutable(string[] words)
     return resultMutable.ToString();
 }
 ```
+The following three screenshots show the same as below for mutable iteration.
 
-
-
-
-
-
-
-
-Immutable Type
-Definition:
+Iteration 1: 
 
 ![Mutable_2a](https://user-images.githubusercontent.com/13406481/162573629-3a36ae69-f455-4cbd-aff9-fa169cf70a9c.png)
+---
+
+Iteration 2: 
 
 ![Mutable_2b](https://user-images.githubusercontent.com/13406481/162573658-043237fa-801c-4ab8-a51d-e41ca897a6f7.png)
 
+---
+Iteration 510: 
 
+![Mutable_2c](https://user-images.githubusercontent.com/13406481/162573685-ae9cd5bc-136a-4a2b-9f93-ed639ed48e5e.png)
 
+As we can show the memory address in this case is alwyas the same. That is because 
 
 Every time string value changes a new memory allocation will be allocated.
 In the sequence of the following screenshots it is possible to see how on every iteration the address memory of resultImmutable changes. 
