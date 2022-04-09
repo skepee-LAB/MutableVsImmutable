@@ -104,6 +104,7 @@ Definition:
 
 ![Mutable_2a](https://user-images.githubusercontent.com/13406481/162573629-3a36ae69-f455-4cbd-aff9-fa169cf70a9c.png)
 
+![Mutable_2b](https://user-images.githubusercontent.com/13406481/162573658-043237fa-801c-4ab8-a51d-e41ca897a6f7.png)
 
 
 
