@@ -76,6 +76,8 @@ Iteration 510: value ```"abbey, absent, absolute, ..."``` memory address: ```0x0
 
 ## Concatenation through mutable types
 
+Now let us consider concatenation through mutable type. The concatenation algorithm is basically the same, apart that our variable ```resultMutable``` is StringBuilder, mutable type.
+
 ```
 private static string ConcatenateWordsMutable(string[] words)
 {
@@ -89,6 +91,8 @@ private static string ConcatenateWordsMutable(string[] words)
     return resultMutable.ToString();
 }
 ```
+
+
 
 
 
