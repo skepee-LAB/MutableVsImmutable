@@ -1,13 +1,77 @@
 # Mutable Vs Immutable
 
 
-Mutable VS Immutable
+## Introduction
 
 Mutable and immutable are not only concepts regarding an unchangable value (like constant or readonly) but it is intended also in terms of memory allocation.
 The following examples with documented screenshots will try to explain the concept that is behind.
 
-A simple code example will help to understand practically when these mutable or immutable types can be used.
-As a simple example let's consider a string concatenation algorithm starting from a list of words and let's try to understand what it means to create an algorithm with mutable or immutable types.
+
+## Use case: concatenation algorithm
+
+A simple code example will help to understand practically when mutable or immutable types can be used. As a simple example let's consider a string concatenation algorithm starting from a list of words. Why choosing concatenation? First of all because concatenation is very common in programming and then it helps to understand what happens in terms of memory allocation.
+So, let's try to understand what it means to create an algorithm with mutable or immutable types.
+
+
+## Concatenation through immutable types
+
+Let's consider a basic algorithm of concatenation by using immutable types. As a string ```resultImmutable``` is a immutable type. On each iteration it results that ```resultImmutable``` has a longer string by concatenating each string in words array.
+
+```
+private static string ConcatenateWordsImmutable(string[] words)
+{
+    string resultImmutable = string.Empty;
+
+    foreach (string item in words)
+    {
+	resultImmutable += item + ",";
+    }
+
+    return resultImmutable;
+}
+```
+
+## Use the Memory windows in the Visual Studio debugger
+Let's see what happens in terms of memory allocation. In order to do that we need to run the code in Debug Mode and put a breakpoint in the algorithm.
+You need also to enable the Memory windows, Enable address-level debugging must be selected in Tools > Options (or Debug > Options) > Debugging > General.
+To open a Memory window
+Make sure Enable address-level debugging is selected in Tools > Options (or Debug > Options) > Debugging > General.
+
+Start debugging by selecting the green arrow, pressing F5, or selecting Debug > Start Debugging.
+Under Debug > Windows > Memory, select Memory 1, Memory 2, Memory 3, or Memory 4. (Some editions of Visual Studio offer only one Memory window.)
+More info [here](https://docs.microsoft.com/en-us/visualstudio/debugger/memory-windows?view=vs-2022)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Concatenation through mutable types
+
+```
+private static string ConcatenateWordsMutable(string[] words)
+{
+    var resultMutable = new StringBuilder();
+
+    foreach (string item in words)
+    {
+	resultMutable.Append(item).Append(",");
+    }
+
+    return resultMutable.ToString();
+}
+```
+
+
+
 
 
 
