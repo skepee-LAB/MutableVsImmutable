@@ -1,4 +1,4 @@
-# Mutable Vs Immutable
+# Mutable vs. Immutable
 
 
 ## Introduction
