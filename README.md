@@ -138,15 +138,20 @@ This summaries the result of both simulations:
 
 ## A look at the performance
 What about if we need to concatenate a long list of strings?
-The following figures show the elaboration time by using string (immutable) and StringBuilder (mutable) against a number of words.
+The following figures show the elaboration time by using immutable (String) and mutable (StringBuilder) type against a number of words.
+
+![ImmutableGraph](https://user-images.githubusercontent.com/13406481/163165439-4684640b-4cea-4fb8-a5b1-e89f7d2d3b25.png)
+
+![MutableGraph](https://user-images.githubusercontent.com/13406481/163165560-b96de71d-9f16-4922-b09d-594a535327d8.png)
+
+As we can see mutable type has more performance, for mutable type the elaboration time when the list is very long tends to be exponential (look at the trend line). At the moment when I am writing this work the iteration for 5M words for mutable is still going ... 
+On the other side by using mutable types the elaboration time is very fast. Just to give you an idea by reading the graph, in a quarter of sec it works 5M iterations of concatenations when by using mutable type it's not yet finished!!!!
 
 
-
-
-
-
-
-
-
+## Final considerations
+Obviously the performance could be better by using async calls for example. The purpose of this work was not about perfomance but to give you an idea of what happens when you use mutable or immutable types. 
+We started from a a very basic algorithm, the same in both cases but on one side I used string to concatenate the final result and StringBuilder on the other side.
+So, when you need to work with string concatenation, very common task in programming, this work suggests to use mutable type like StringBuilder, not immutable type.
+Hope it helps!
 
 
