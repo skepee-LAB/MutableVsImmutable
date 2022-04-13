@@ -63,13 +63,21 @@ On the first iteration we will have this situation:
 Iteration 1: 
 value ```"abbey,"```, memory address: ```0x0000019780019788```
 
+![Immutable_2a](https://user-images.githubusercontent.com/13406481/163172098-b1e9c15d-3e2c-40d8-be02-8f3c2971a844.png)
+<!--
 ![Immutable_2a](https://user-images.githubusercontent.com/13406481/162569090-94b00d3f-642f-4cfb-8a60-dafc9849ef76.png)
+-->
+
 
 ---
 ### Iteration 2:
 the following screenshot shows the memory allocation in the next iteration.
 
+<!--
 ![Immutable_2b](https://user-images.githubusercontent.com/13406481/162569383-788e9ee7-b870-4b58-8045-e98adb6cbd07.png)
+-->
+![Immutable_2b](https://user-images.githubusercontent.com/13406481/163172160-0eb0c68f-7fa5-4ffd-85c4-b507050585a3.png)
+
 
 On the second iteration we will have this situation: 
 Iteration 2: value ```"abbey, absent,"``` memory address: ```0x00000197800197B0```
@@ -77,7 +85,10 @@ Iteration 2: value ```"abbey, absent,"``` memory address: ```0x00000197800197B0`
 ---
 ### Iteration 500:
 
+![Immutable_2c](https://user-images.githubusercontent.com/13406481/163172198-a30ecc6b-6f74-4306-967d-c3c2c1157d13.png)
+<!--
 ![Immutable_2c](https://user-images.githubusercontent.com/13406481/162572385-ccfc7e5c-02c1-405d-912b-f1a8efb33d3c.png)
+-->
 
 Iteration 500: value ```"abbey, absent, absolute, ..."``` memory address: ```0x0000019780201DB0```
 
@@ -106,18 +117,29 @@ With the same logic, the following screenshots show the same as below for mutabl
 
 ### Iteration 1: 
 
+![Mutable_2a](https://user-images.githubusercontent.com/13406481/163172272-ebcd9923-d5db-4262-8552-b05f87dee06c.png)
+
+<!--
 ![Mutable_2a](https://user-images.githubusercontent.com/13406481/162573629-3a36ae69-f455-4cbd-aff9-fa169cf70a9c.png)
+-->
 ---
 
 ### Iteration 2: 
 
+![Mutable_2b](https://user-images.githubusercontent.com/13406481/163172342-a249a68f-8497-4a44-887e-1ada219a0bd7.png)
+
+<!--
 ![Mutable_2b](https://user-images.githubusercontent.com/13406481/162573658-043237fa-801c-4ab8-a51d-e41ca897a6f7.png)
+-->
 
 ---
 ### Iteration 500: 
 
-![Mutable_2c](https://user-images.githubusercontent.com/13406481/162573685-ae9cd5bc-136a-4a2b-9f93-ed639ed48e5e.png)
+![Mutable_2c](https://user-images.githubusercontent.com/13406481/163172414-85eb7483-4ee8-4cf0-80c5-de4ba01b8c47.png)
 
+<!--
+![Mutable_2c](https://user-images.githubusercontent.com/13406481/162573685-ae9cd5bc-136a-4a2b-9f93-ed639ed48e5e.png)
+-->
 
 #### Recap after all iterations (mutable):
 As we can see at each iteration  ```resultImmutable``` value changes (obviously) <ins>**but**</ins> the the memory address remains the same.
