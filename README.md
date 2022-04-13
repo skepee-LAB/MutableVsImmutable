@@ -136,6 +136,9 @@ This summaries the result of both simulations:
 
 
 
+## A look at the performance
+What about if we need to concatenate a long list of strings?
+The following figures show the elaboration time by using string (immutable) and StringBuilder (mutable) against a number of words.
 
 
 
@@ -146,33 +149,4 @@ This summaries the result of both simulations:
 
 
 
-Test file is a text file with one word for each line.
 
-Test 1:
---------------
-FileSmall: 
-Totale lines: 500
-Disk space (Win10): 5 KB
-
-
-
-Type		| Use Of			| Elpased Time  | Memory Allocation	|
-
-Immutable	| String			|          (+)  | 		500 MB ca.
-
-Mutable		| StringBuilder		|		   (-)  | 	
-
-
-
-Test 2:
---------------
-FileBig: 
-Totale lines: 3740000
-Disk space (Win10): 43829 KB
-
-
-Type		| Use Of			| Elpased Time  | Memory Allocation	|
-
-Immutable	| String			|    250ms (+)  | 		831 MB
-
-Mutable		| StringBuilder		|		   (-)  | 	
