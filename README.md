@@ -3,14 +3,14 @@
 
 ## Introduction
 
-Mutable and immutable are concepts regarding not only an unchangable value (like constant or readonly) but also about memory allocation.
-The following examples with documented screenshots will try to explain the concept that is behind.
+Mutable and immutable types are concepts regarding not only an unchangable value (like constant or readonly) but also about memory allocation.
+This work will show an example with documented screenshots the concept that is under the hood.
 
 
 ## Use case: concatenation algorithm
 
 A simple code example will help to understand practically when mutable or immutable types can be used. As a simple example let's consider a string concatenation algorithm starting from a list of words. Why choosing concatenation? First of all because concatenation is a very common topic in programming and then it helps to understand what happens in terms of memory allocation.
-As example the file contains a list of 500 words that start with the following sequence:
+It is useful to know that as example the list of words that start with the following sequence:
 
 ```
 abbey
@@ -28,8 +28,7 @@ But, before that we need to set something in Visual Studio...
 
 ## Use the Memory windows in the Visual Studio debugger
 
-Let's see what happens in terms of memory allocation. In order to do that we need to run the code in Debug Mode and put a breakpoint.
-You need also to enable the Memory windows, enable address-level debugging must be selected in Tools > Options (or Debug > Options) > Debugging > General.
+Visual Studio offers some tools to check memory allocation in Debug Mode. One of these is Memory windows, for example, that enables address-level debugging by selecting Tools > Options (or Debug > Options) > Debugging > General.
 
 Start debugging by selecting the green arrow, pressing F5, or selecting Debug > Start Debugging.
 Under Debug > Windows > Memory, select Memory 1, Memory 2, Memory 3, or Memory 4. (Some editions of Visual Studio offer only one Memory window.)
@@ -168,12 +167,19 @@ The following figures show the elaboration time by using immutable (String) and 
 
 As we can see mutable type has more performance, for mutable type the elaboration time when the list is very long tends to be exponential (look at the trend line). At the moment when I am writing this work the iteration for 5M words for mutable is still going ... 
 On the other side by using mutable types the elaboration time is very fast. Just to give you an idea by reading the graph, in a quarter of sec it works 5M iterations of concatenations when by using mutable type it's not yet finished!!!!
-
+Obviously the performance could be better by using async calls for example. The purpose of this work was not about perfomance but to give an idea of what happens when you use mutable or immutable types. 
 
 ## Final considerations
-Obviously the performance could be better by using async calls for example. The purpose of this work was not about perfomance but to give you an idea of what happens when you use mutable or immutable types. 
-We started from a a very basic algorithm, the same in both cases but on one side I used string to concatenate the final result and StringBuilder on the other side.
-So, when you need to work with string concatenation, very common task in programming, this work suggests to use mutable type like StringBuilder, not immutable type.
+This work shows what happens when you work with ```mutable``` or ```immutables``` types.
+
+The purpose of this work is not about perfomance but to give an idea of what happens when you use mutable or immutable types by using the same algorithm. 
+This work shows under the hood how CLR handles memory allocation for mutable and immutable types.
+
+As an example the same concatenation algorithm (very basic) has been used by using ```String``` as immutable type and ```StringBuilder``` as mutable type.
+The figures show that by increasing the number of strings to concatenate the elaboration time has a linear trend line for ```mutable``` and exponenetial for ```immutable```. 
+
+So, when you need to work with string concatenation, very common task in programming, this work suggests to use mutable type like StringBuilder and not immutable type.
+
 Hope it helps!
 
 
