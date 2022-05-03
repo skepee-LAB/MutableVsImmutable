@@ -167,7 +167,7 @@ The following figures show the elaboration time by using immutable (String) and 
 
 As we can see mutable type has more performance, for mutable type the elaboration time when the list is very long tends to be exponential (look at the trend line). At the moment when I am writing this work the iteration for 5M words for mutable is still going ... 
 On the other side by using mutable types the elaboration time is very fast. Just to give you an idea by reading the graph, in a quarter of sec it works 5M iterations of concatenations when by using mutable type it's not yet finished!!!!
-Obviously the performance could be better by using async calls for example. The purpose of this work was not about perfomance but to give an idea of what happens when you use mutable or immutable types. 
+Obviously the performance could be better by using async calls for example. The purpose of this work is not about perfomance but to give an idea of what happens when you use mutable or immutable types. 
 
 ## Final considerations
 This work shows what happens when you work with ```mutable``` or ```immutables``` types.
