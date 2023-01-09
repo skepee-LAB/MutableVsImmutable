@@ -169,6 +169,15 @@ As we can see mutable type has more performance, for mutable type the elaboratio
 On the other side by using mutable types the elaboration time is very fast. Just to give you an idea by reading the graph, in a quarter of sec it works 5M iterations of concatenations when by using mutable type it's not yet finished!!!!
 Obviously the performance could be better by using async calls for example. The purpose of this work is not about perfomance but to give an idea of what happens when you use mutable or immutable types. 
 
+##BenchamarkDotNet
+This the benchmark by using [BenchamarkDotNet](https://github.com/dotnet/BenchmarkDotNet)
+
+|        Method |       Mean |     Error |    StdDev |     Gen0 |    Gen1 |  Allocated |
+| ------------- |-----------:|----------:|----------:|---------:|--------:|-----------:|
+|   MutableType |   5.888 us | 0.1170 us | 0.1889 us |   2.6245 |  0.1526 |   16.09 KB |
+| ImmutableType | 135.286 us | 3.2935 us | 9.7109 us | 316.1621 | 15.0146 | 1937.41 KB |
+
+
 ## Final considerations
 This work shows what happens when you work with ```mutable``` or ```immutables``` types.
 
